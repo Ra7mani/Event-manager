@@ -1,9 +1,9 @@
 
   <!-- header-section - start
   ================================================== -->
-  <header id="header-section" class="header-section sticky-header-section not-stuck clearfix">
+  <header id="header-section" class="header-section sticky-header-section not-stuck clearfix" >
     <!-- header-bottom - start -->
-    <div class="header-bottom">
+    <div class="header-bottom" [ngStyle]="{'background-color': isScrolled ? 'rgba(0, 0, 9, 0.7)' : 'transparent'}">
       <div class="container">
         <div class="row">
 
@@ -26,35 +26,31 @@
                 <div class="col-lg-10">
                   <div class="menu-item-list ul-li clearfix">
                     <ul>
-                      <li class="menu-item-has-children active">
+                      <li [ngClass]="{'active': activeMenu === 'home'}" (click)="setActive('home')" class="menu-item-has-children">
                         <a href="#!">home</a>
-                        
                       </li>
-                      <li class="menu-item-has-children">
+                      <li [ngClass]="{'active': activeMenu === 'about'}" (click)="setActive('about')" class="menu-item-has-children">
                         <a [routerLink]="['/home/details']">about</a>
-                        
                       </li>
-                      <li class="menu-item-has-children">
+                      <li [ngClass]="{'active': activeMenu === 'events'}" (click)="setActive('events')" class="menu-item-has-children">
                         <a href="#!">events</a>
-                        
                       </li>
-                      <li class="menu-item-has-children">
+                      <li [ngClass]="{'active': activeMenu === 'blogs'}" (click)="setActive('blogs')" class="menu-item-has-children">
                         <a href="#!">blogs</a>
-                        
                       </li>
-                      <li>
+                      <li [ngClass]="{'active': activeMenu === 'gallery'}" (click)="setActive('gallery')">
                         <a href="gallery.html">gallery</a>
                       </li>
-                      <li>
+                      <li [ngClass]="{'active': activeMenu === 'speaker'}" (click)="setActive('speaker')">
                         <a href="speaker.html">speaker</a>
                       </li>
-                      <li class="menu-item-has-children">
-                        <a href="#!">contact </a>
-                        
+                      <li [ngClass]="{'active': activeMenu === 'contact'}" (click)="setActive('contact')" class="menu-item-has-children">
+                        <a href="#!">contact</a>
                       </li>
                     </ul>
                   </div>
                 </div>
+                
                 <!-- menu-item-list - end -->
 
                 <!-- menu-item-list - start -->
