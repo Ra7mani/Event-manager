@@ -10,7 +10,13 @@ import { LayoutComponent } from './component/layout/layout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './component/about/about.component';
 import { DetailsComponent } from './component/details/details.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { EventsComponent } from './component/events/events.component';
+import { EventDetailsComponent } from './component/event-details/event-details.component';
+import { BookingComponent } from './component/booking/booking.component';
+import { BlogComponent } from './component/blog/blog.component';
+import { GalleryComponent } from './component/gallery/gallery.component';
+import { ContactComponent } from './component/contact/contact.component';
+import { ServiceComponent } from './component/service/service.component';
 
 @NgModule({
   declarations: [
@@ -20,15 +26,20 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     HomeComponent,
     LayoutComponent,
     AboutComponent,
-    DetailsComponent
+    DetailsComponent,
+    EventsComponent,
+    EventDetailsComponent,
+    BookingComponent,
+    BlogComponent,
+    GalleryComponent,
+    ContactComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SlickCarouselModule,
-    
     
   ],
   providers: [],
