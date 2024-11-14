@@ -11,70 +11,119 @@
           <div class="row">
 
             <!-- reg-form - start -->
-            <div class="col-lg-4 col-md-12 col-sm-12">
-              <div class="reg-form">
+			<div class="col-lg-4 col-md-12 col-sm-12">
+				<div class="reg-form">
+				  <div class="from-title">
+					<h2 class="title-text"><strong>register</strong> now</h2>
+					<div class="sub-title">make a booking now</div>
+				  </div>
+			  
+				  <div class="form-wrapper mb-30" style="max-height: 300px; overflow-y: auto;">
+					<form action="#">
+					  <div class="form-item">
+						<input type="text" placeholder="User Name">
+					  </div>
+					  <div class="form-item">
+						<input type="text" placeholder="First Name">
+					  </div>
 
-                <div class="from-title">
-                  <h2 class="title-text"><strong>register</strong> now</h2>
-                  <div class="sub-title">make a booking now</div>
-                </div>
+					  <div class="form-item">
+						<input type="text" placeholder="Last Name">
+					  </div>
 
-                <div class="form-wrapper mb-30">
-                  <form action="#">
+					  <div class="form-item">
+						<input type="email" placeholder="Email Address">
+					  </div>
+					  <div class="form-item">
+						<input type="tel" placeholder="Phone Number">
+					  </div>
+					  <div class="form-item" >
+						<select class="package-select" style="max-height: 50px; overflow-y: auto;">
+						  <option selected="">City</option>
+						  <option value="1">Ariana</option>
+						  <option value="2">Beja</option>
+						  <option value="3">Ben Arous</option>
+						  <option value="4">Bizerte</option>
+						  <option value="5">Gabès</option>
+						  <option value="6">Gafsa</option>
+						  <option value="7">Jendouba</option>
+						  <option value="8">Kairouan</option>
+						  <option value="9">Kasserine</option>
+						  <option value="10">Kebili</option>
+						  <option value="11">Kébili</option>
+						  <option value="12">La Manouba</option>
+						  <option value="13">Le Kef</option>
+						  <option value="14">Mahdia</option>
+						  <option value="15">Manouba</option>
+						  <option value="16">Médenine</option>
+						  <option value="17">Monastir</option>
+						  <option value="18">Nabeul</option>
+						  <option value="19">Sfax</option>
+						  <option value="20">Sidi Bouzid</option>
+						  <option value="21">Siliana</option>
+						  <option value="22">Souk Ahras</option>
+						  <option value="23">Tataouine</option>
+						  <option value="24">Tozeur</option>
+						</select>
+					  </div>
+					   
+					 
+					  
 
-                    <div class="form-item">
-                      <input type="text" placeholder="Full Name">
-                    </div>
+					  <div class="form-item">
+						<input type="password" placeholder="password">
+					  </div>
+					  <div class="form-item">
+						<input type="password" placeholder=" Confirm password">
+					  </div>
+					  
+					  <div class="form-item">
+						<label><strong>Choose your account type:</strong></label>
+						<div class="radio-group">
+						  <div class="radio-item">
+							<input type="radio"  name="accountType" value="personal" />
+							<label  >Personal   </label>
+						  </div> 
+						  
+						  
+						</div>
+					  </div>
+					  <div class="form-item">
+						
+						<div class="radio-group">
+						  <div class="radio-item">
+							<input type="radio" name="accountType" value="professional" />
+							<label >Professional </label>
+						  </div> 
+						  
+						  
+						</div>
+					  </div>
 
-                    <div class="form-item">
-                      <input type="email" placeholder="Email Address">
-                    </div>
-
-                    <div class="form-item">
-                      <input type="tel" placeholder="Phone Number">
-                    </div>
-
-                    <div class="form-item">
-                      <select class="package-select">
-                        <option selected="">Choose Package</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                    </div>
-
-                    <div class="form-item">
-                      <select class="quantity-select">
-                        <option selected="">Ticket Quantity</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                    </div>
-                    
-                  </form>
-                </div>
-
-                <button type="submit" class="submit-btn">register now</button>
-                
-              </div>
-            </div>
+					  
+					</form>
+				  </div>
+			  
+				  <button type="submit" class="submit-btn">register now</button>
+				</div>
+			  </div>
+			  
             <!-- reg-form - end -->
 
             <!-- slider-content - start -->
-            <div class="col-lg-8 col-md-12 col-sm-12">
-              <div class="slider-content">
-                <div class="countdown-timer mb-50">
-                  <ul class="countdown-list" data-countdown="2020/08/08"></ul>
-                </div>
-                <span class="date">05 December 2024</span>
-                <h1 class="title-text">
-                  MAHDIA
-                </h1>
-                <strong class="bold-text">KRM For Events</strong>
-                <a href="#!" class="details-btn">Event details</a>
-              </div>
-            </div>
+			<div class="col-lg-8 col-md-12 col-sm-12">
+				<div class="slider-content">
+				  <div class="countdown-timer mb-50">
+					<ul class="countdown-list" data-countdown="2020/08/08"></ul>
+				  </div>
+				  <!-- Span pour afficher la date actuelle -->
+				  <span class="date" id="current-date">Loading date...</span>
+				  <h1 class="title-text">MAHDIA</h1>
+				  <strong class="bold-text">KRM For Events</strong>
+				  <a  [routerLink]="['/home/events']" class="details-btn"> Event details</a>
+				</div>
+			  </div>
+			  
             <!-- slider-content - end -->
             
           </div>
@@ -88,385 +137,7 @@
   ================================================== -->
 
 
-  	<!-- altranative-header - start
-		================================================== -->
-		<div class="header-altranative">
-			<div class="container">
-				<div class="logo-area float-left">
-					<a href="index-1.html">
-						<img src="assets/images/1.site-logo.png" alt="logo_not_found">
-					</a>
-				</div>
-
-				<button type="button" id="sidebarCollapse" class="alt-menu-btn float-right">
-					<i class="fas fa-bars"></i>
-				</button>
-			</div>
-
-			<!-- sidebar menu - start -->
-			<div class="sidebar-menu-wrapper">
-				<div id="sidebar" class="sidebar">
-					<span id="sidebar-dismiss" class="sidebar-dismiss">
-						<i class="fas fa-arrow-left"></i>
-					</span>
-
-					<div class="sidebar-header">
-						<a href="#!">
-							<img src="assets/images/2.site-logo.png" alt="logo_not_found">
-						</a>
-					</div>
-
-					<!-- sidebar-form - start -->
-					<div class="sidebar-form">
-						<form action="#">
-							<input id="altmenu-sidebar-search" type="search" placeholder="Search">
-							<label for="altmenu-sidebar-search"><i class="fas fa-search"></i></label>
-						</form>
-					</div>
-					<!-- sidebar-form - end -->
-
-					<!-- main-pages-links - start -->
-					<div class="menu-link-list main-pages-links">
-						<h2 class="menu-title">all home pages</h2>
-						<ul>
-							<li>
-								<a href="index-1.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Home V.1
-								</a>
-							</li>
-							<li class="active">
-								<a href="index-2.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Home V.2
-								</a>
-							</li>
-							<li>
-								<a href="index-3.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Home v.3
-								</a>
-							</li>
-							<li>
-								<a href="index-4.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Home v.4
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- main-pages-links - end -->
-
-					<!-- other-pages-links - start -->
-					<div class="menu-link-list other-pages-links">
-						<h2 class="menu-title">all single pages</h2>
-						<ul>
-							<li>
-								<a href="about.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									About Us
-								</a>
-							</li>
-							<li>
-								<a href="service.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									our Services
-								</a>
-							</li>
-							<li>
-								<a href="event-1.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									event list
-								</a>
-							</li>
-							<li>
-								<a href="event-2.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									event grid
-								</a>
-							</li>
-							<li>
-								<a href="event-1-without-sidebar.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									list without sidebar
-								</a>
-							</li>
-							<li>
-								<a href="event-2-without-sidebar.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									grid without sidebar
-								</a>
-							</li>
-							<li>
-								<a href="blog.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Latest blogs
-								</a>
-							</li>
-							<li>
-								<a href="gallery.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									our gallery
-								</a>
-							</li>
-							<li>
-								<a href="speaker.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									event speakers
-								</a>
-							</li>
-							<li>
-								<a href="contact.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									contact us
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- other-pages-links - end -->
-
-					<!-- inner-pages-links - start -->
-					<div class="menu-link-list inner-pages-links">
-						<h2 class="menu-title">all inner pages</h2>
-						<ul>
-							<li>
-								<a href="booking.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									event booking
-								</a>
-							</li>
-							<li>
-								<a href="event-details.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									event details
-								</a>
-							</li>
-							<li>
-								<a href='blog-details.html'>
-									<span class="icon"><i class="fas fa-home"></i></span>
-									blog details
-								</a>
-							</li>
-							<li>
-								<a href="faq.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									Frequently Ask Qusetion
-								</a>
-							</li>
-							<li>
-								<a href="404-error.html">
-									<span class="icon"><i class="fas fa-home"></i></span>
-									404 error
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- inner-pages-links - end -->
-
-					<!-- login-btn-group - start -->
-					<div class="login-btn-group">
-						<ul>
-
-							<li>
-								<a href="#alt-register-modal" class="register-modal-btn">
-									Register
-								</a>
-								<div id="alt-register-modal" class="reglog-modal-wrapper register-modal mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
-									<div class="overlay-black clearfix">
-
-										<!-- leftside-content - start -->
-										<div class="leftside-content">
-											<div class="site-logo-wrapper mb-80">
-												<a href="#!" class="logo">
-													<img src="assets/images/2.site-logo.png" alt="logo_not_found">
-												</a>
-											</div>
-											<div class="register-login-link mb-80">
-												<ul>
-													<li><a href="#!">Login</a></li>
-													<li class="active"><a href="#!">Register</a></li>
-												</ul>
-											</div>
-											<div class="copyright-text">
-												<p class="m-0">©2019 <a href="#!" class="yellow-color">Harmoni.com</a> all right reserved, made with <i class="fas fa-heart"></i> by jThemes Studio </p>
-											</div>
-										</div>
-										<!-- leftside-content - end -->
-
-										<!-- rightside-content - start -->
-										<div class="rightside-content text-center">
-
-											<div class="mb-30">
-												<h2 class="form-title title-large white-color">Account <strong>Register</strong></h2>
-												<span class="form-subtitle white-color">Have an account? <strong>LOGIN NOW</strong></span>
-											</div>
-
-											<div class="login-form text-center mb-50">
-												<form action="#!">
-													<div class="form-item">
-														<input type="email" placeholder="User Name">
-													</div>
-													<div class="form-item">
-														<input type="password" placeholder="Password">
-													</div>
-													<div class="form-item">
-														<input type="email" placeholder="Repeat Password">
-													</div>
-													<div class="form-item">
-														<input type="password" placeholder="Email Address">
-													</div>
-													<div class="human-verification text-left">
-														<input type="checkbox" id="alt-imnotarobot">
-														<label for="alt-imnotarobot">I'm not a robot</label>
-														<span class="verification-image">
-															<img src="assets/images/iamnotrobot.png" alt="Image_not_found">
-														</span>
-													</div>
-													<button type="submit" class="login-btn">login now</button>
-												</form>
-											</div>
-
-											<div class="bottom-text white-color">
-												<p class="m-0">
-													* Denotes mandatory field.
-												</p>
-												<p class="m-0">** At least one telephone number is required.</p>
-											</div>
-
-										</div>
-										<!-- rightside-content - end -->
-
-										<a class="popup-modal-dismiss" href="#!">
-											<i class="fas fa-times"></i>
-										</a>
-
-									</div>
-								</div>
-							</li>
-							<li>
-								<a href="#alt-login-modal" class="login-modal-btn">
-									Login
-								</a>
-								<div id="alt-login-modal" class="reglog-modal-wrapper mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
-									<div class="overlay-black clearfix">
-
-										<!-- leftside-content - start -->
-										<div class="leftside-content">
-											<div class="site-logo-wrapper mb-80">
-												<a href="#!" class="logo">
-													<img src="assets/images/2.site-logo.png" alt="logo_not_found">
-												</a>
-											</div>
-											<div class="register-login-link mb-80">
-												<ul>
-													<li class="active"><a href="#!">Login</a></li>
-													<li><a href="#!">Register</a></li>
-												</ul>
-											</div>
-											<div class="copyright-text">
-												<p class="m-0">©2018 <a href="#!" class="yellow-color">Harmoni.com</a> all right reserved, made with <i class="fas fa-heart"></i> by jThemes Studio </p>
-											</div>
-										</div>
-										<!-- leftside-content - end -->
-
-										<!-- rightside-content - start -->
-										<div class="rightside-content text-center">
-
-											<div class="mb-30">
-												<h2 class="form-title title-large white-color">Account <strong>Login</strong></h2>
-												<span class="form-subtitle white-color">Login to our website, or <strong>REGISTER</strong></span>
-											</div>
-
-											<div class="fb-login-btn mb-30">
-												<a href="#!">
-													<span class="icon">
-														<i class="fab fa-facebook-f"></i>
-													</span>
-													login with facebook
-												</a>
-											</div>
-
-											<div class="or-text mb-30">
-												<span>or sign in</span>
-											</div>
-
-											<div class="login-form text-center mb-50">
-												<form action="#!">
-													<div class="form-item">
-														<input type="email" placeholder="example@gmail.com">
-													</div>
-													<div class="form-item">
-														<input type="password" placeholder="Password">
-													</div>
-													<button type="submit" class="login-btn">login now</button>
-												</form>
-											</div>
-
-											<div class="bottom-text white-color">
-												<p class="m-0">
-													* Denotes mandatory field.
-												</p>
-												<p class="m-0">** At least one telephone number is required.</p>
-											</div>
-
-										</div>
-										<!-- rightside-content - end -->
-
-										<a class="popup-modal-dismiss" href="#!">
-											<i class="fas fa-times"></i>
-										</a>
-
-									</div>
-								</div>
-							</li>
-							
-						</ul>
-					</div>
-					<!-- login-btn-group - end -->
-
-					<!-- social-links - start -->
-					<div class="social-links">
-						<h2 class="menu-title">get in touch</h2>
-						<div class="mb-15">
-							<h3 class="contact-info">
-								<i class="fas fa-phone"></i>
-								100-2222-9999
-							</h3>
-							<h3 class="contact-info">
-								<i class="fas fa-envelope"></i>
-								infoharmoni.com
-							</h3>
-						</div>
-						<ul>
-							<li>
-								<a href="#!"><i class="fab fa-facebook-f"></i></a>
-							</li>
-							<li>
-								<a href="#!"><i class="fab fa-twitter"></i></a>
-							</li>
-							<li>
-								<a href="#!"><i class="fab fa-twitch"></i></a>
-							</li>
-							<li>
-								<a href="#!"><i class="fab fa-google-plus-g"></i></a>
-							</li>
-							<li>
-								<a href="#!"><i class="fab fa-instagram"></i></a>
-							</li>
-						</ul>
-						<a href="contact.html" class="contact-btn">contact us</a>
-					</div>
-					<!-- social-links - end -->
-
-					<div class="overlay"></div>
-				</div>
-			</div>
-			<!-- sidebar menu - end -->
-		</div>
-		<!-- altranative-header - end
-		================================================== -->
-
-
+ 
 
 
 
@@ -530,8 +201,8 @@
 							</div>
 
 							<div class="text-right">
-								<a href="#!" class="booking-btn">booking ticket</a>
-								<a href="#!" class="details-btn">tickets & details</a>
+								<a [routerLink]="['/home/event-booking']" class="booking-btn">booking ticket</a>
+								<a [routerLink]="['/home/event-details']"  class="details-btn">tickets & details</a>
 							</div>
 							
 						</div>
@@ -556,14 +227,14 @@
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="section-title text-left mb-30">
 							<span class="line-style"></span>
-							<small class="sub-title">we are harmoni</small>
+							<small class="sub-title">we are KRM'Events</small>
 							<h2 class="big-title"><strong>No.1</strong> Events Management</h2>
 							<p class="black-color mb-50">
-								Lorem ipsum dollor site amet the best  consectuer adipiscing elites sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. 
-							</p>
-							<a href="#!" class="custom-btn">
-								about harmonei
-							</a>
+								Our Events Management platform is a comprehensive digital solution designed to streamline the planning, organization, and execution of events. We provide tools for event organizers to create, promote, and manage events, handle registrations and ticketing							</p>
+								<a routerLink="/home/details" class="custom-btn">
+									about KRM
+								  </a>
+								  
 						</div>
 					</div>
 					<!-- section-title - end -->
@@ -574,7 +245,7 @@
 							<ul>
 
 								<li>
-									<a href="#!" class="about-item">
+									<span class="about-item">
 										<span class="icon">
 											<i class="flaticon-handshake"></i>
 										</span>
@@ -584,10 +255,10 @@
 										<small class="sub-title">
 											More than 200 teams
 										</small>
-									</a>
+									</span>
 								</li>
 								<li>
-									<a href="#!" class="about-item">
+									<span class="about-item">
 										<span class="icon">
 											<i class="flaticon-two-balloons"></i>
 										</span>
@@ -597,10 +268,10 @@
 										<small class="sub-title">
 											perfact venues
 										</small>
-									</a>
+									</span>
 								</li>
 								<li>
-									<a href="#!" class="about-item">
+									<span class="about-item">
 										<span class="icon">
 											<i class="flaticon-cheers"></i>
 										</span>
@@ -610,11 +281,11 @@
 										<small class="sub-title">
 											We thinking out of the box
 										</small>
-									</a>
+									</span>
 								</li>
 
 								<li>
-									<a href="#!" class="about-item">
+									<span class="about-item">
 										<span class="icon">
 											<i class="flaticon-clown-hat"></i>
 										</span>
@@ -624,10 +295,10 @@
 										<small class="sub-title">
 											We make you perfect event
 										</small>
-									</a>
+									</span>
 								</li>
 								<li>
-									<a href="#!" class="about-item">
+									<span class="about-item">
 										<span class="icon">
 											<i class="flaticon-speech-bubble"></i>
 										</span>
@@ -637,10 +308,10 @@
 										<small class="sub-title">
 											Anytime anywhere
 										</small>
-									</a>
+									</span>
 								</li>
 								<li>
-									<a href="#!" class="about-item">
+									<span class="about-item">
 										<span class="icon">
 											<i class="flaticon-light-bulb"></i>
 										</span>
@@ -650,7 +321,7 @@
 										<small class="sub-title">
 											We have million idea
 										</small>
-									</a>
+									</span>
 								</li>
 
 							</ul>
@@ -669,122 +340,127 @@
 		================================================== -->
 		<section id="event-gallery-section" class="event-gallery-section sec-ptb-100 clearfix">
 			<div class="container">
-				<div class="mb-50">
-					<div class="row">
-
-						<!-- section-title - start -->
-						<div class="col-lg-6 col-md-12 col-sm-12">
-							<div class="section-title">
-								<small class="sub-title">harmoni gallery</small>
-								<h2 class="big-title">Beautiful & <strong>Unforgettable Times</strong></h2>
-							</div>
-						</div>
-						<!-- section-title - end -->
-
-						<div class="col-lg-6 col-md-12 col-sm-12">
-							<div class="button-group filters-button-group">
-								<button class="button is-checked" data-filter="*">
-									<i class="fas fa-star"></i>
-									<strong>all</strong> gallery
-								</button>
-								<button class="button" data-filter=".video-gallery">
-									<i class="fas fa-play-circle"></i>
-									<strong>video</strong> gallery
-								</button>
-								<button class="button" data-filter=".photo-gallery">
-									<i class="far fa-image"></i>
-									<strong>photo</strong> gallery
-								</button>
-							</div>
-						</div>
-
+			  <div class="mb-50">
+				<div class="row">
+				  <!-- section-title - start -->
+				  <div class="col-lg-6 col-md-12 col-sm-12">
+					<div class="section-title">
+					  <small class="sub-title">KRM gallery</small>
+					  <h2 class="big-title">Beautiful & <strong>Unforgettable Times</strong></h2>
 					</div>
+				  </div>
+				  <!-- section-title - end -->
+		  
+				  <div class="col-lg-6 col-md-12 col-sm-12">
+					<div class="button-group filters-button-group">
+					  <button class="button" (click)="filterGallery('*')">
+						<i class="fas fa-star"></i>
+						<strong>all</strong> gallery
+					  </button>
+					  <button class="button" (click)="filterGallery('video-gallery')">
+						<i class="fas fa-play-circle"></i>
+						<strong>video</strong> gallery
+					  </button>
+					  <button class="button" (click)="filterGallery('photo-gallery')">
+						<i class="far fa-image"></i>
+						<strong>photo</strong> gallery
+					  </button>
+					</div>
+				  </div>
 				</div>
+			  </div>
 			</div>
-
-			<div class="grid zoom-gallery clearfix mb-80" data-isotope="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 0 } }">
-				<div class="grid-item grid-item--height2 photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/1.image.jpg">
-						<img src="assets/images/gallery/1.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>John Doe Wedding day</h3>
-						<span>Wedding Party, 24 June 2016</span>
-					</div>
+		  
+			<div class="grid zoom-gallery clearfix mb-80">
+			  <div class="grid-item grid-item--height2 photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/1.image.jpg">
+				  <img src="assets/images/gallery/1.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>John Doe Wedding day</h3>
+				  <span>Wedding Party, 24 June 2016</span>
 				</div>
-				<div class="grid-item grid-item--width2 video-gallery " data-category="video-gallery">
-					<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
-						<img src="assets/images/gallery/2.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>Business Conference in Dubai</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
+			  </div>
+		  
+			  <div class="grid-item grid-item--width2 video-gallery" *ngIf="isVisible('video-gallery')">
+				<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
+				  <img src="assets/images/gallery/2.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>Business Conference in Dubai</h3>
+				  <span>Food Festival, 24 June 2016</span>
 				</div>
-				<div class="grid-item photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/3.image.jpg">
-						<img src="assets/images/gallery/3.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>Envato Author Fun Hiking</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
+			  </div>
+		  
+			  <div class="grid-item photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/3.image.jpg">
+				  <img src="assets/images/gallery/3.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>Envato Author Fun Hiking</h3>
+				  <span>Food Festival, 24 June 2016</span>
 				</div>
-
-				<div class="grid-item photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/4.image.jpg">
-						<img src="assets/images/gallery/4.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>John Doe Wedding day</h3>
-						<span>Wedding Party, 24 June 2016</span>
-					</div>
+			  </div>
+		  
+			  <div class="grid-item photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/4.image.jpg">
+				  <img src="assets/images/gallery/4.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>John Doe Wedding day</h3>
+				  <span>Wedding Party, 24 June 2016</span>
 				</div>
-				<div class="grid-item grid-item--width2 video-gallery " data-category="video-gallery">
-					<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
-						<img src="assets/images/gallery/5.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>New Year Celebration</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
+			  </div>
+		  
+			  <div class="grid-item grid-item--width2 video-gallery" *ngIf="isVisible('video-gallery')">
+				<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
+				  <img src="assets/images/gallery/5.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>New Year Celebration</h3>
+				  <span>Food Festival, 24 June 2016</span>
 				</div>
-
-				<div class="grid-item grid-item--width2 photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/6.image.jpg">
-						<img src="assets/images/gallery/6.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>John Doe Wedding day</h3>
-						<span>Wedding Party, 24 June 2016</span>
-					</div>
+			  </div>
+		  
+			  <div class="grid-item grid-item--width2 photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/6.image.jpg">
+				  <img src="assets/images/gallery/6.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>John Doe Wedding day</h3>
+				  <span>Wedding Party, 24 June 2016</span>
 				</div>
-				<div class="grid-item video-gallery " data-category="video-gallery">
-					<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
-						<img src="assets/images/gallery/7.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>New Year Celebration</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
+			  </div>
+		  
+			  <div class="grid-item video-gallery" *ngIf="isVisible('video-gallery')">
+				<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
+				  <img src="assets/images/gallery/7.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>New Year Celebration</h3>
+				  <span>Food Festival, 24 June 2016</span>
 				</div>
-				<div class="grid-item photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/8.image.jpg">
-						<img src="assets/images/gallery/8.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>Envato Author Fun Hiking</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
+			  </div>
+		  
+			  <div class="grid-item photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/8.image.jpg">
+				  <img src="assets/images/gallery/8.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>Envato Author Fun Hiking</h3>
+				  <span>Food Festival, 24 June 2016</span>
 				</div>
+			  </div>
 			</div>
-
+		  
 			<div class="text-center">
-				<a href="#!" class="custom-btn">view all gallery</a>
+			  <a routerLink="/home/gallery" class="custom-btn">view all gallery</a>
 			</div>
-
-
-		</section>
+		  </section>
+		  
+		
+		  
+	
 		<!-- event-gallery-section - end
 		================================================== -->
 
@@ -797,7 +473,7 @@
 				<!-- section-title - start -->
 				<div class="section-title text-center mb-50">
 					<small class="sub-title">our services</small>
-					<h2 class="big-title">harmony <strong>Expertise</strong></h2>
+					<h2 class="big-title">KRM <strong>Expertise</strong></h2>
 				</div>
 				<!-- section-title - end -->
 
@@ -824,152 +500,7 @@
 					</div>
 					<!-- expertise-item - end -->
 
-					<!-- expertise-item - start -->
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="expertise-item">
-
-							<div class="expertise-image">
-								<img src="assets/images/experties/img2.jpg" alt="Image_not_found">
-								<a href="#!" class="plus-effect"></a>
-							</div>
-
-							<div class="expertise-content">
-								<h3 class="title">Wedding Party</h3>
-								<p>Start from <strong>$1.200-$2.000</strong></p>
-								<a href="#!" class="link-btn">
-									<i class="fas fa-arrow-circle-right"></i>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<!-- expertise-item - end -->
-
-					<!-- expertise-item - start -->
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="expertise-item">
-
-							<div class="expertise-image">
-								<img src="assets/images/experties/img3.jpg" alt="Image_not_found">
-								<a href="#!" class="plus-effect"></a>
-							</div>
-
-							<div class="expertise-content">
-								<h3 class="title">Wedding Party</h3>
-								<p>Start from <strong>$1.200-$2.000</strong></p>
-								<a href="#!" class="link-btn">
-									<i class="fas fa-arrow-circle-right"></i>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<!-- expertise-item - end -->
-
-					<!-- expertise-item - start -->
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="expertise-item">
-
-							<div class="expertise-image">
-								<img src="assets/images/experties/img1.jpg" alt="Image_not_found">
-								<a href="#!" class="plus-effect"></a>
-							</div>
-
-							<div class="expertise-content">
-								<h3 class="title">Wedding Party</h3>
-								<p>Start from <strong>$1.200-$2.000</strong></p>
-								<a href="#!" class="link-btn">
-									<i class="fas fa-arrow-circle-right"></i>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<!-- expertise-item - end -->
-
-					<!-- expertise-item - start -->
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="expertise-item">
-
-							<div class="expertise-image">
-								<img src="assets/images/experties/img2.jpg" alt="Image_not_found">
-								<a href="#!" class="plus-effect"></a>
-							</div>
-
-							<div class="expertise-content">
-								<h3 class="title">Wedding Party</h3>
-								<p>Start from <strong>$1.200-$2.000</strong></p>
-								<a href="#!" class="link-btn">
-									<i class="fas fa-arrow-circle-right"></i>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<!-- expertise-item - end -->
-
-					<!-- expertise-item - start -->
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="expertise-item">
-
-							<div class="expertise-image">
-								<img src="assets/images/experties/img3.jpg" alt="Image_not_found">
-								<a href="#!" class="plus-effect"></a>
-							</div>
-
-							<div class="expertise-content">
-								<h3 class="title">Wedding Party</h3>
-								<p>Start from <strong>$1.200-$2.000</strong></p>
-								<a href="#!" class="link-btn">
-									<i class="fas fa-arrow-circle-right"></i>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<!-- expertise-item - end -->
-
-					<!-- expertise-item - start -->
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="expertise-item">
-
-							<div class="expertise-image">
-								<img src="assets/images/experties/img1.jpg" alt="Image_not_found">
-								<a href="#!" class="plus-effect"></a>
-							</div>
-
-							<div class="expertise-content">
-								<h3 class="title">Wedding Party</h3>
-								<p>Start from <strong>$1.200-$2.000</strong></p>
-								<a href="#!" class="link-btn">
-									<i class="fas fa-arrow-circle-right"></i>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<!-- expertise-item - end -->
-
-					<!-- expertise-item - start -->
-					<div class="col-lg-3 col-md-6 col-sm-12">
-						<div class="expertise-item">
-
-							<div class="expertise-image">
-								<img src="assets/images/experties/img2.jpg" alt="Image_not_found">
-								<a href="#!" class="plus-effect"></a>
-							</div>
-
-							<div class="expertise-content">
-								<h3 class="title">Wedding Party</h3>
-								<p>Start from <strong>$1.200-$2.000</strong></p>
-								<a href="#!" class="link-btn">
-									<i class="fas fa-arrow-circle-right"></i>
-								</a>
-							</div>
-
-						</div>
-					</div>
-					<!-- expertise-item - end -->
+					
 
 				</div>
 
@@ -978,95 +509,65 @@
 		<!-- event-expertise-section - end
 		================================================== -->
 
-    	<!-- speaker-section - start
+    
+		<!-- speaker-section - start
 		================================================== -->
 		<section id="speaker-section" class="speaker-section clearfix">
-			<div class="jarallax" style="background-image: url(assets/images/speaker/Black-White-Dubai-Wallpaper.jpg);">
-				<div class="overlay-white">
-					<div class="container">
-
-						<!-- speaker-carousel - start -->
-						<div class="speaker-carousel">
-							<div class="slider-for">
-
-								<div class="item">
-									<div class="row">
-
-										<!-- speaker-image - start -->
-										<div class="col-lg-6 col-md-12 col-sm-12">
-											<div class="speaker-image image-wrapper text-center">
-												<img src="assets/images/speaker/speakes1.png" alt="Image_not_found">
-												<span class="speaker-name"><strong>Jenni</strong> Berthas</span>
-											</div>
-										</div>
-										<!-- speaker-image - end -->
-
-										<!-- speaker-content - start -->
-										<div class="col-lg-6 col-md-12 col-sm-12">
-											<div class="speaker-content">
-
-												<!-- section-title - start -->
-												<div class="section-title text-left mb-50">
-													<span class="line-style"></span>
-													<small class="sub-title">harmoni staffs</small>
-													<h2 class="big-title">Professional <strong>Speakers</strong></h2>
-												</div>
-												<!-- section-title - end -->
-
-												<div class="speaker-info">
-													<div class="speaker-title mb-30">
-														<span class="speaker-name"><strong>Jenni</strong> Berthas</span>
-														<span class="work-experienc yellow-color"><strong>15 Years</strong> experienced</span>
-													</div>
-													<p class="black-color mb-30">
-														Lorem ipsum dollor site amet the best  consectuer adipiscing elites sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam...
-													</p>
-													<div class="speaker-social-network ul-li">
-														<h3 class="title title-medium mb-15">
-															<strong>Social</strong> Network
-														</h3>
-														<ul>
-															<li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-															<li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-															<li><a href="#!"><i class="fab fa-twitch"></i></a></li>
-															<li><a href="#!"><i class="fab fa-google-plus-g"></i></a></li>
-															<li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-														</ul>
-													</div>
-												</div>
-
-											</div>
-										</div>
-										<!-- speaker-content - end -->
-
-									</div>
-								</div>
-
-						
-
+			<div class="jarallax" style="background-image: url('assets/images/speaker/Black-White-Dubai-Wallpaper.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+			  <div class="overlay-white">
+				<div class="container">
+				  <div id="speakerCarousel" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+					  <div *ngFor="let speaker of speakers; let i = index" class="carousel-item" [class.active]="i === 0">
+						<div class="row">
+						  <div class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center">
+							<div class="speaker-image image-wrapper text-center">
+							  <img [src]="speaker.image" class="d-block w-100" alt="Image_not_found">
 							</div>
-
-							<div class="slider-nav">
-								<div class="item">
-									<div class="item-content">
-										<span class="speaker-thumbnail">
-											<img src="assets/images/speaker/speakes-thumbnail.png" alt="Image_not_found">
-										</span>
-										<h3 class="speaker-name">Jenni Berthas</h3>
-										<span class="sub-title">Harmoni Speaker</span>
-									</div>
+						  </div>
+						  <div class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center">
+							<div class="speaker-content">
+							  <div class="section-title text-left mb-50">
+								<span class="line-style"></span>
+								<small class="sub-title">{{ speaker.subtitle }}</small>
+								<h2 class="big-title">Professional  <strong>Speakers</strong></h2>
+							  </div>
+							  <div class="speaker-info">
+								<div class="speaker-title mb-30">
+								  <span class="speaker-name"><strong>{{ speaker.name }}</strong> {{ speaker.lastName }}</span><br>
+								  <span class="work-experience yellow-color"><strong>{{ speaker.experience }} Years</strong> experienced</span>
 								</div>
-
-								
-
+								<p class="black-color mb-30">{{ speaker.description }}</p>
+							  </div>
 							</div>
+						  </div>
 						</div>
-						<!-- speaker-carousel - end -->
-
+					  </div>
 					</div>
+		  
+					<!-- Contrôles du carrousel -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#speakerCarousel" data-bs-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#speakerCarousel" data-bs-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Next</span>
+					</button>
+		  
+					<!-- Indicateurs personnalisés -->
+					<div class="carousel-indicators custom-indicators">
+					  <button *ngFor="let speaker of speakers; let i = index" type="button" data-bs-target="#speakerCarousel"
+						[attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-label]="'Slide ' + (i + 1)">
+					  </button>
+					</div>
+				  </div>
 				</div>
+			  </div>
 			</div>
-		</section>
+		  </section>
+		  
+		  
 		<!-- speaker-section - end
 		================================================== -->
 
@@ -1075,72 +576,50 @@
 	<!-- testimonial5-section - start
 		================================================== -->
 		<section id="testimonial5-section" class="testimonial5-section clearfix">
-			<div class="jarallax" style="background-image: url(assets/images/testimonial-bg.jpg);">
-				<div class="overlay-black sec-ptb-100">
-					<div class="container">
-
-						<!-- testimonial5-carousel - start -->
-						<div id="testimonial5-carousel" class="testimonial5-carousel owl-carousel owl-theme">
-
-							<div class="item text-center">
-								<span class="quote-icon">
-									<i class="fas fa-quote-right"></i>
-								</span>
-								<p class="clients-comment">
-									“Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet. Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet.”
-								</p>
-								<div class="client-info">
-									<h3 class="client-name">Jenni Hernandes</h3>
-									<span class="client-sub-title">Graphic Designer</span>
-								</div>
-							</div>
-
-							<div class="item text-center">
-								<span class="quote-icon">
-									<i class="fas fa-quote-right"></i>
-								</span>
-								<p class="clients-comment">
-									“Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet. Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet.”
-								</p>
-								<div class="client-info">
-									<h3 class="client-name">Jenni Hernandes</h3>
-									<span class="client-sub-title">Graphic Designer</span>
-								</div>
-							</div>
-
-							<div class="item text-center">
-								<span class="quote-icon">
-									<i class="fas fa-quote-right"></i>
-								</span>
-								<p class="clients-comment">
-									“Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet. Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet.”
-								</p>
-								<div class="client-info">
-									<h3 class="client-name">Jenni Hernandes</h3>
-									<span class="client-sub-title">Graphic Designer</span>
-								</div>
-							</div>
-
-							<div class="item text-center">
-								<span class="quote-icon">
-									<i class="fas fa-quote-right"></i>
-								</span>
-								<p class="clients-comment">
-									“Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet. Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet.”
-								</p>
-								<div class="client-info">
-									<h3 class="client-name">Jenni Hernandes</h3>
-									<span class="client-sub-title">Graphic Designer</span>
-								</div>
-							</div>
-
+			<div class="jarallax" style="background-image: url('assets/images/testimonial-bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+			  <div class="overlay-black sec-ptb-100">
+				<div class="container">
+				  <div id="testimonial5Carousel" class="carousel slide" data-bs-ride="carousel">
+		  
+					<div class="carousel-inner">
+					  <div *ngFor="let testimonial of testimonials; let i = index" class="carousel-item" [class.active]="i === 0">
+						<div class="item text-center">
+						  <span class="quote-icon">
+							<i class="fas fa-quote-right"></i>
+						  </span>
+						  <p class="clients-comment">
+							“{{ testimonial.comment }}”
+						  </p>
+						  <div class="client-info">
+							<h3 class="client-name">{{ testimonial.name }}</h3>
+							<span class="client-sub-title">{{ testimonial.position }}</span>
+						  </div>
 						</div>
-						<!-- testimonial5-carousel - end -->
-
+					  </div>
 					</div>
+		  
+					<!-- Contrôles du carrousel -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#testimonial5Carousel" data-bs-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#testimonial5Carousel" data-bs-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Next</span>
+					</button>
+		  
+					<!-- Indicateurs placés sous client-info -->
+					<div class="carousel-indicators indicators">
+					  <button *ngFor="let testimonial of testimonials; let i = index" type="button" data-bs-target="#testimonial5Carousel"
+						[attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-label]="'Slide ' + (i + 1)">
+					  </button>
+					</div>
+				  </div>
 				</div>
+			  </div>
 			</div>
-		</section>
+		  </section>
+		  
 		<!-- testimonial5-section - end
 		================================================== -->
 
@@ -1165,7 +644,7 @@
 					<!-- event-makeing-btn - start -->
 					<div class="col-lg-3 col-md-12 col-sm-12">
 						<div class="event-makeing-btn">
-							<a href="#!">make an event now</a>
+							<a>make an event now</a>
 						</div>
 					</div>
 					<!-- event-makeing-btn - end -->
@@ -1188,7 +667,7 @@
 						<div class="col-lg-3 col-md-12 col-sm-12">
 							<div class="section-title text-left">
 								<span class="line-style"></span>
-								<small class="sub-title">harmoni events</small>
+								<small class="sub-title">KRM events</small>
 								<h2 class="big-title"><strong>event</strong> listing</h2>
 							</div>
 						</div>
@@ -1271,7 +750,7 @@
 												</li>
 											</ul>
 										</div>
-										<a href="#!" class="tickets-details-btn">
+										<a [routerLink]="['/home/event-details']"  class="tickets-details-btn">
 											tickets & details
 										</a>
 									</div>
@@ -1281,246 +760,7 @@
 							</div>
 							<!-- event-item - end -->
 
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/2.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/3.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/4.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/5.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/6.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
+						
 							<div class="col-lg-12 col-md-12 col-sm-12">
 								<div class="pagination ul-li clearfix">
 									<ul>
@@ -1542,6 +782,7 @@
 						</div>
 					</div>
 					<!-- conference-event - end -->
+
 
 					<!-- playground-event - start -->
 					<div id="playground-event" class="tab-pane fade">
@@ -1595,245 +836,7 @@
 							</div>
 							<!-- event-item - end -->
 
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/8.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/1.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/2.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/3.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/4.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
+							
 
 							<div class="col-lg-12 col-md-12 col-sm-12">
 								<div class="pagination ul-li clearfix">
@@ -1909,245 +912,7 @@
 							</div>
 							<!-- event-item - end -->
 
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/6.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/7.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/8.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/1.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/2.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
+						
 
 							<div class="col-lg-12 col-md-12 col-sm-12">
 								<div class="pagination ul-li clearfix">
@@ -2223,246 +988,7 @@
 							</div>
 							<!-- event-item - end -->
 
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/4.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/5.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/6.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/7.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
-
-							<!-- event-item - start -->
-							<div class="col-lg-4 col-md-6 col-sm-12">
-								<div class="event-item2 clearfix">
-
-									<!-- event-image - start -->
-									<div class="event-image">
-										<div class="post-date">
-											<span class="date">26</span>
-											<small class="month">june</small>
-										</div>
-										<img src="assets/images/event/8.event-grid.jpg" alt="Image_not_found">
-									</div>
-									<!-- event-image - end -->
-
-									<!-- event-content - start -->
-									<div class="event-content">
-										<div class="event-title mb-15">
-											<h3 class="title">
-												Barcelona Food truck Festival 2018
-											</h3>
-											<span class="ticket-price yellow-color">Tickets from $52</span>
-										</div>
-										<div class="event-post-meta ul-li-block mb-30">
-											<ul>
-												<li>
-													<span class="icon">
-														<i class="far fa-clock"></i>
-													</span>
-													Start 20:00pm - 22:00pm
-                          
-												</li>
-												<li>
-													<span class="icon">
-														<i class="fas fa-map-marker-alt"></i>
-													</span>
-													Manhattan, New York
-												</li>
-											</ul>
-										</div>
-										<a href="#!" class="tickets-details-btn">
-											tickets & details
-										</a>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-							</div>
-							<!-- event-item - end -->
+							
 
 							<div class="col-lg-12 col-md-12 col-sm-12">
 								<div class="pagination ul-li clearfix">
@@ -2515,15 +1041,14 @@
 							<div class="card">
 								<div class="card-header" id="headingone">
 									<button class="btn collapsed" data-toggle="collapse" data-target="#collapseone" aria-expanded="true" aria-controls="collapseone">
-										<span>01.</span> How to join Harmoni Event Management?
+										<span>01.</span> How to join KRM Event Management?
 									</button>
 								</div>
 
 								<div id="collapseone" class="collapse" aria-labelledby="headingone" data-parent="#faq-accordion">
 									<div class="card-body">
 										<h3>answer</h3>
-										Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet.
-									</div>
+										To join KRM Event Management, simply visit our platform and create a professional account. Once registered, you can submit events, manage bookings, and access various features tailored to businesses and event organizers									</div>
 								</div>
 							</div>
 
@@ -2536,8 +1061,7 @@
 								<div id="collapsetwo" class="collapse show" aria-labelledby="headingtwo" data-parent="#faq-accordion">
 									<div class="card-body">
 										<h3>answer</h3>
-										Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet.
-									</div>
+										To create your own event on KRM, log in to your account, go to the "Submit Event" section, fill in the details, and submit for approval									</div>
 								</div>
 							</div>
 
@@ -2555,19 +1079,7 @@
 								</div>
 							</div>
 
-							<div class="card">
-								<div class="card-header" id="headingfour">
-									<button class="btn collapsed" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-										<span>04.</span> About the price to make new event?
-									</button>
-								</div>
-								<div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#faq-accordion">
-									<div class="card-body">
-										<h3>answer</h3>
-										Bring people together, or turn your passion into a business. Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet.
-									</div>
-								</div>
-							</div>
+							
 
 						</div>
 					</div>
@@ -2585,23 +1097,7 @@
 							</div>
 							<!-- section-title - end -->
 
-							<!-- latest-blog - start -->
-							<div class="latest-blog clearfix">
-								<div class="blog-image">
-									<img src="assets/images/blog/1.latest-blog.jpg" alt="Image_not_found">
-									<a href="#!" class="plus-effect"></a>
-								</div>
-								<div class="blog-content">
-									<div class="blog-title mb-30">
-										<h3>Barcelona Friday Food Truck Festival 26 Mei 2019</h3>
-										<span>26 June 2018</span>
-									</div>
-									<p class="m-0">
-										Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet.
-									</p>
-								</div>
-							</div>
-							<!-- latest-blog - end -->
+							
 
 							<!-- latest-blog - start -->
 							<div class="latest-blog clearfix">
@@ -2615,7 +1111,7 @@
 										<span>26 June 2018</span>
 									</div>
 									<p class="m-0">
-										Harmoni gives you everything you need to host your best event yet. lorem ipsum diamet.
+										KRM gives you everything you need to host your best event yet.
 									</p>
 								</div>
 							</div>
@@ -2631,4 +1127,44 @@
 		<!-- news-update-section - end
 		================================================== -->
 
+		<script>
+			// Simple script to handle YouTube video links
+document.addEventListener("DOMContentLoaded", function() {
+    const galleryItems = document.querySelectorAll('.grid-item a');
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            const url = item.getAttribute('href');
+            if (url.includes('youtu')) {
+                event.preventDefault();
+                window.open(url, '_blank');  // Open videos in a new tab
+            }
+        });
+    });
+});
+
+// Fonction pour afficher la date actuelle
+function displayCurrentDate() {
+      // Récupérer l'élément où afficher la date
+      const dateElement = document.getElementById("current-date");
+      
+      if (dateElement) {
+        // Obtenir la date actuelle et la formater
+        const currentDate = new Date();
+        const options = { 
+          day: '2-digit', 
+          month: 'long', 
+          year: 'numeric' 
+        };
+        
+        // Mettre à jour le contenu de l'élément avec la date formatée
+        dateElement.textContent = currentDate.toLocaleDateString('en-GB', options);  // Format: 09 November 2024
+      }
+    }
+
+    // Appeler la fonction dès que le contenu de la page est chargé
+    document.addEventListener("DOMContentLoaded", function() {
+      displayCurrentDate();  // Afficher la date dès que le DOM est prêt
+    });
+		</script>
   

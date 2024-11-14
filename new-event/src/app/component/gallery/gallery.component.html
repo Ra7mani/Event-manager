@@ -18,7 +18,7 @@
 								<!-- breadcrumb-list - start -->
 								<div class="breadcrumb-list">
 									<ul>
-										<li class="breadcrumb-item"><a href="index-1.html" class="breadcrumb-link">Home</a></li>
+										<li class="breadcrumb-item"><a [routerLink]="['/home']" class="breadcrumb-link">Home</a></li>
 										<li class="breadcrumb-item active" aria-current="page">KRM gallery</li>
 									</ul>
 								</div>
@@ -41,117 +41,121 @@
 		================================================== -->
 		<section id="event-gallery-section" class="event-gallery-section sec-ptb-100 clearfix">
 			<div class="container">
-
-				<div class="button-group filters-button-group mb-30">
-					<button class="button is-checked" data-filter="*">
+			  <div class="mb-50">
+				<div class="row">
+				  <!-- section-title - start -->
+				  <div class="col-lg-6 col-md-12 col-sm-12">
+					<div class="section-title">
+					  <small class="sub-title">KRM gallery</small>
+					  <h2 class="big-title">Beautiful & <strong>Unforgettable Times</strong></h2>
+					</div>
+				  </div>
+				  <!-- section-title - end -->
+		  
+				  <div class="col-lg-6 col-md-12 col-sm-12">
+					<div class="button-group filters-button-group">
+					  <button class="button" (click)="filterGallery('*')">
 						<i class="fas fa-star"></i>
 						<strong>all</strong> gallery
-					</button>
-					<button class="button" data-filter=".video-gallery">
+					  </button>
+					  <button class="button" (click)="filterGallery('video-gallery')">
 						<i class="fas fa-play-circle"></i>
 						<strong>video</strong> gallery
-					</button>
-					<button class="button" data-filter=".photo-gallery">
+					  </button>
+					  <button class="button" (click)="filterGallery('photo-gallery')">
 						<i class="far fa-image"></i>
 						<strong>photo</strong> gallery
-					</button>
-				</div>
-
-				<div class="grid zoom-gallery clearfix mb-80" data-isotope="{ &quot;masonry&quot;: { &quot;columnWidth&quot;: 0 } }">
-				<div class="grid-item grid-item--height2 photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/1.image.jpg">
-						<img src="assets/images/gallery/1.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>John Doe Wedding day</h3>
-						<span>Wedding Party, 24 June 2016</span>
+					  </button>
 					</div>
+				  </div>
 				</div>
-				<div class="grid-item grid-item--width2 video-gallery " data-category="video-gallery">
-					<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
-						<img src="assets/images/gallery/2.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>Business Conference in Dubai</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
-				</div>
-				<div class="grid-item photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/3.image.jpg">
-						<img src="assets/images/gallery/3.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>Envato Author Fun Hiking</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
-				</div>
-
-				<div class="grid-item photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/4.image.jpg">
-						<img src="assets/images/gallery/4.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>John Doe Wedding day</h3>
-						<span>Wedding Party, 24 June 2016</span>
-					</div>
-				</div>
-				<div class="grid-item grid-item--width2 video-gallery " data-category="video-gallery">
-					<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
-						<img src="assets/images/gallery/5.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>New Year Celebration</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
-				</div>
-
-				<div class="grid-item grid-item--width2 photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/6.image.jpg">
-						<img src="assets/images/gallery/6.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>John Doe Wedding day</h3>
-						<span>Wedding Party, 24 June 2016</span>
-					</div>
-				</div>
-				<div class="grid-item video-gallery " data-category="video-gallery">
-					<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
-						<img src="assets/images/gallery/7.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>New Year Celebration</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
-				</div>
-				<div class="grid-item photo-gallery " data-category="photo-gallery">
-					<a class="popup-link" href="assets/images/gallery/8.image.jpg">
-						<img src="assets/images/gallery/8.image.jpg" alt="Image_not_found">
-					</a>
-					<div class="item-content">
-						<h3>Envato Author Fun Hiking</h3>
-						<span>Food Festival, 24 June 2016</span>
-					</div>
-				</div>
+			  </div>
 			</div>
-
-				<div class="pagination ul-li clearfix">
-					<ul>
-						<li class="page-item prev-item">
-							<a class="page-link" href="#">Prev</a>
-						</li>
-						<li class="page-item"><a class="page-link" href="#">01</a></li>
-						<li class="page-item active"><a class="page-link" href="#">02</a></li>
-						<li class="page-item"><a class="page-link" href="#">03</a></li>
-						<li class="page-item"><a class="page-link" href="#">04</a></li>
-						<li class="page-item"><a class="page-link" href="#">05</a></li>
-						<li class="page-item next-item">
-							<a class="page-link" href="#">Next</a>
-						</li>
-					</ul>
+		  
+			<div class="grid zoom-gallery clearfix mb-80">
+			  <div class="grid-item grid-item--height2 photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/1.image.jpg">
+				  <img src="assets/images/gallery/1.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>John Doe Wedding day</h3>
+				  <span>Wedding Party, 24 June 2016</span>
 				</div>
-
+			  </div>
+		  
+			  <div class="grid-item grid-item--width2 video-gallery" *ngIf="isVisible('video-gallery')">
+				<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
+				  <img src="assets/images/gallery/2.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>Business Conference in Dubai</h3>
+				  <span>Food Festival, 24 June 2016</span>
+				</div>
+			  </div>
+		  
+			  <div class="grid-item photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/3.image.jpg">
+				  <img src="assets/images/gallery/3.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>Envato Author Fun Hiking</h3>
+				  <span>Food Festival, 24 June 2016</span>
+				</div>
+			  </div>
+		  
+			  <div class="grid-item photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/4.image.jpg">
+				  <img src="assets/images/gallery/4.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>John Doe Wedding day</h3>
+				  <span>Wedding Party, 24 June 2016</span>
+				</div>
+			  </div>
+		  
+			  <div class="grid-item grid-item--width2 video-gallery" *ngIf="isVisible('video-gallery')">
+				<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
+				  <img src="assets/images/gallery/5.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>New Year Celebration</h3>
+				  <span>Food Festival, 24 June 2016</span>
+				</div>
+			  </div>
+		  
+			  <div class="grid-item grid-item--width2 photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/6.image.jpg">
+				  <img src="assets/images/gallery/6.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>John Doe Wedding day</h3>
+				  <span>Wedding Party, 24 June 2016</span>
+				</div>
+			  </div>
+		  
+			  <div class="grid-item video-gallery" *ngIf="isVisible('video-gallery')">
+				<a class="popup-youtube" href="https://youtu.be/-haiaZ011OM">
+				  <img src="assets/images/gallery/7.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>New Year Celebration</h3>
+				  <span>Food Festival, 24 June 2016</span>
+				</div>
+			  </div>
+		  
+			  <div class="grid-item photo-gallery" *ngIf="isVisible('photo-gallery')">
+				<a class="popup-link" href="assets/images/gallery/8.image.jpg">
+				  <img src="assets/images/gallery/8.image.jpg" alt="Image_not_found">
+				</a>
+				<div class="item-content">
+				  <h3>Envato Author Fun Hiking</h3>
+				  <span>Food Festival, 24 June 2016</span>
+				</div>
+			  </div>
 			</div>
-		</section>
+		  
+			
+		  </section>
 		<!-- event-gallery-section - end
 		================================================== -->
 

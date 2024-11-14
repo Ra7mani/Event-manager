@@ -1,9 +1,9 @@
 
   <!-- header-section - start
   ================================================== -->
-  <header id="header-section" class="header-section sticky-header-section not-stuck clearfix">
+  <header id="header-section" class="header-section sticky-header-section not-stuck clearfix" >
     <!-- header-bottom - start -->
-    <div class="header-bottom">
+    <div class="header-bottom" [ngStyle]="{'background-color': isScrolled ? 'rgba(0, 0, 9, 0.7)' : 'transparent'}">
       <div class="container">
         <div class="row">
 
@@ -26,36 +26,32 @@
                 <div class="col-lg-10">
                   <div class="menu-item-list ul-li clearfix">
                     <ul>
-                      <li class="menu-item-has-children active">
-                        <a href="#!">Home</a>
-                        
+                      <li [ngClass]="{'active': activeMenu === 'home'}" (click)="setActive('home')" class="menu-item-has-children">
+                        <a href="#!">home</a>
                       </li>
-                      <li class="menu-item-has-children">
-                        <a [routerLink]="['/home/details']">About</a>
-                        
+                      <li [ngClass]="{'active': activeMenu === 'about'}" (click)="setActive('about')" class="menu-item-has-children">
+                        <a [routerLink]="['/home/details']">about</a>
                       </li>
-                      <li class="menu-item-has-children">
+                      <li [ngClass]="{'active': activeMenu === 'speaker'}" (click)="setActive('speaker')">
                         <a [routerLink]="['/home/service']">Services</a>
-                        
                       </li>
-                      <li class="menu-item-has-children">
-                        <a [routerLink]="['/home/events']">Events</a>
-                        
+                      <li [ngClass]="{'active': activeMenu === 'events'}" (click)="setActive('events')" class="menu-item-has-children">
+                        <a [routerLink]="['/home/events']">events</a>
                       </li>
-                      <li class="menu-item-has-children">
-                        <a [routerLink]="['/home/blogs']">Blogs</a>
-                        
+                      <li [ngClass]="{'active': activeMenu === 'blogs'}" (click)="setActive('blogs')" class="menu-item-has-children">
+                        <a [routerLink]="['/home/blogs']">blogs</a>
                       </li>
-                      <li>
-                        <a [routerLink]="['/home/gallery']">Gallery</a>
+                      <li [ngClass]="{'active': activeMenu === 'gallery'}" (click)="setActive('gallery')">
+                        <a [routerLink]="['/home/gallery']">gallery</a>
                       </li>
-                      <li>
-                        <a [routerLink]="['/home/contact']">Contact</a>
+                      
+                      <li [ngClass]="{'active': activeMenu === 'contact'}" (click)="setActive('contact')" class="menu-item-has-children">
+                        <a [routerLink]="['/home/contact']">contact</a>
                       </li>
-                     
                     </ul>
                   </div>
                 </div>
+                
                 <!-- menu-item-list - end -->
 
                 <!-- menu-item-list - start -->
@@ -135,16 +131,17 @@
                         </div>
                       </li>
                       <li>
-                        <button type="button" class="toggle-overlay search-btn">
+                        <button type="button" class="toggle-overlay search-btn" id="searchButton">
                           <i class="fas fa-search"></i>
                         </button>
                         <!-- search-body - start -->
-                        <div class="search-body">
+                        <div class="search-body hidden" id="searchBody">
                           <div class="search-form">
                             <form action="#">
                               <input class="search-input" type="search" placeholder="Search Here">
                               <div class="outer-close toggle-overlay">
-                                <button type="button" class="search-close">
+                                <!-- Close button to hide the search form -->
+                                <button type="button" class="search-close" id="closeButton">
                                   <i class="fas fa-times"></i>
                                 </button>
                               </div>
@@ -166,10 +163,25 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // Récupération des éléments du DOM
+const searchButton = document.getElementById('searchButton');
+const searchBody = document.getElementById('searchBody');
+const closeButton = document.getElementById('closeButton');
+
+// Fonction pour afficher le formulaire de recherche
+searchButton.addEventListener('click', function() {
+  searchBody.classList.remove('hidden'); // Supprime la classe cachée
+});
+
+// Fonction pour fermer le formulaire de recherche
+closeButton.addEventListener('click', function() {
+  searchBody.classList.add('hidden'); // Ajoute la classe cachée
+});
+
+    </script>
     <!-- header-bottom - end -->
   </header>
   <!-- header-section - end
   ================================================== -->
-
-
-  	

@@ -21,8 +21,8 @@ const routes: Routes = [
       { 
         path: 'events', component: EventsComponent,
         children: [
-          { path: 'event-details', component: EventDetailsComponent },
-          { path: 'event-booking', component: BookingComponent },
+          
+          
         ],
       },
       { path: 'blogs', component: BlogComponent },
@@ -30,7 +30,8 @@ const routes: Routes = [
       { path: 'contact', component: ContactComponent },
       { path: 'service', component: ServiceComponent },
 
-
+      { path: 'event-booking', component: BookingComponent },
+      { path: 'event-details', component: EventDetailsComponent },
 
 
 

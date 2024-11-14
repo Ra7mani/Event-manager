@@ -17,6 +17,7 @@ import { BlogComponent } from './component/blog/blog.component';
 import { GalleryComponent } from './component/gallery/gallery.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ServiceComponent } from './component/service/service.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ServiceComponent } from './component/service/service.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     
   ],
   providers: [],

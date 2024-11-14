@@ -11,15 +11,15 @@
 								<!-- breadcrumb-title - start -->
 								<div class="breadcrumb-title text-center mb-50">
 									<span class="sub-title">ticket booking</span>
-									<h2 class="big-title">harmoni <strong>booking</strong></h2>
+									<h2 class="big-title">KRM <strong>booking</strong></h2>
 								</div>
 								<!-- breadcrumb-title - end -->
 
 								<!-- breadcrumb-list - start -->
 								<div class="breadcrumb-list">
 									<ul>
-										<li class="breadcrumb-item"><a href="index-1.html" class="breadcrumb-link">Home</a></li>
-										<li class="breadcrumb-item active" aria-current="page">booking</li>
+										<li class="breadcrumb-item"><a [routerLink]="['/home']" class="breadcrumb-link">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page"><a [routerLink]="['/home/event-booking']" class="breadcrumb-link">Booking</a></li>
 									</ul>
 								</div>
 								<!-- breadcrumb-list - end -->
@@ -362,20 +362,19 @@
 									</span>
 									<div class="title-content">
 										<small>contact information</small>
-										<h3>harmoni staff</h3>
+										<h3>KRM	 staff</h3>
 									</div>
 								</div>
 								<div class="contact-links ul-li-block clearfix">
 									<p class="black-color mb-30">
-										Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant. Proin gravida nibh vel velit auctor aliquet. sollicitudin, lorem quis more...
-									</p>
+										Our team is always available and ready to respond to your questions. Don't hesitate to reach outwe're here to help									</p>
 									<ul>
 										<li>
 											<a href="#!" target="_blank">
 												<span class="icon">
 													<i class="fab fa-facebook-f"></i>
 												</span>
-												facebook.com/harmoni
+												facebook.com/KRM
 											</a>
 										</li>
 										<li>
@@ -383,7 +382,7 @@
 												<span class="icon">
 													<i class="fab fa-twitter"></i>
 												</span>
-												twitter.comharmoni
+												twitter.comKRM
 											</a>
 										</li>
 										<li>
@@ -391,11 +390,11 @@
 												<span class="icon">
 													<i class="fas fa-link"></i>
 												</span>
-												http://www.harmoni.com
+												http://www.KRM.com
 											</a>
 										</li>
 									</ul>
-									<a href="#!" class="custom-btn">CONTACT US NOW</a>
+									<a [routerLink]="['/home/contact']" class="custom-btn">CONTACT US NOW</a>
 								</div>
 							</div>
 							<!-- location-wrapper - end -->

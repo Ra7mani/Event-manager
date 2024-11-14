@@ -1,0 +1,88 @@
+.custom-indicators {
+  
+  bottom: 15px; /* Distance par rapport au bas du carousel */
+  
+ 
+  display: flex;
+  gap: 5px;     /* Espace entre les boutons */
+}
+
+.custom-indicators button {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-indicators button.active {
+  background-color: #afb2b6; /* Couleur de l'indicateur actif */
+}
+
+.custom-indicators button:hover {
+  background-color: #555; /* Couleur au survol */
+}
+
+.custom-indicators button:focus {
+  outline: none;
+}
+
+.carousel-indicators.indicators {
+  position: static;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carousel-indicators.indicators button {
+  background-color: #fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 0.7;
+}
+
+.carousel-indicators.indicators .active {
+  background-color: #ffcc00;
+  opacity: 1;
+}
+
+/* Style pour le conteneur du formulaire */
+.reg-form .form-wrapper {
+  max-height: 300px;
+  overflow-y: scroll; /* Assurez-vous que le scroll est activé */
+  scrollbar-width: thin; /* Pour les navigateurs modernes */
+  scrollbar-color: #cfc9c9 #42414124; /* Couleurs du thumb et du track */
+}
+
+/* Pour les navigateurs Webkit (Chrome, Safari) */
+.reg-form .form-wrapper::-webkit-scrollbar {
+  width: 8px; /* Largeur du scrollbar */
+}
+
+.reg-form .form-wrapper::-webkit-scrollbar-thumb {
+  background-color: #c0b8b8; /* Couleur du "thumb" */
+  border-radius: 10px; /* Bords arrondis */
+}
+
+.reg-form .form-wrapper::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Couleur du fond du track */
+  border-radius: 10px; /* Bords arrondis */
+}
+
+.radio-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.radio-item {
+  display: flex;
+  
+}
+
+label {
+size: 5px;
+margin-left: 20px;
+}
