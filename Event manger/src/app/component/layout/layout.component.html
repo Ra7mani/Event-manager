@@ -1003,47 +1003,59 @@ document.addEventListener("DOMContentLoaded", function() {
 		<!-- speaker-section - start
 		================================================== -->
 		<section id="speaker-section" class="speaker-section clearfix">
-			<div class="jarallax" style="background-image: url(assets/images/speaker/Black-White-Dubai-Wallpaper.jpg);">
+			<div class="jarallax" style="background-image: url(assets/images/speaker/Black-White-Dubai-Wallpaper.jpg); background-size: cover; background-position: center; background-attachment: fixed;">
 			  <div class="overlay-white">
-				<div class="container">
-				  
-				  <ngx-slick-carousel class="speaker-carousel" [config]="slideConfig">
-					<div ngxSlickItem *ngFor="let speaker of speakers" class="item">
-					  <div class="row">
-						<div class="col-lg-6 col-md-12 col-sm-12">
-						  <div class="speaker-image image-wrapper text-center">
-							<img [src]="speaker.image" alt="Image_not_found">
-							
-						  </div>
-						</div>
-						<div class="col-lg-6 col-md-12 col-sm-12">
-						  <div class="speaker-content">
-							<div class="section-title text-left mb-50">
-							  <span class="line-style"></span>
-							  <small class="sub-title">{{ speaker.subtitle }}</small>
-							  <h2 class="big-title">Professional <strong>Speakers</strong></h2>
-							</div>
-							<div class="speaker-info">
-							  <div class="speaker-title mb-30">
-								<span class="speaker-name" ><strong>{{ speaker.name }}</strong> {{ speaker.lastName }}</span> <br>
-								<span class="work-experienc yellow-color"><strong>{{ speaker.experience }} Years</strong> experienced</span>
-							  </div>
-							  <p class="black-color mb-30">
-								{{ speaker.description }}
-							  </p>
-							  
-							</div>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </ngx-slick-carousel>
-				  
-				</div>
+			<div class="container">
+			  <div id="speakerCarousel" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+			  <div *ngFor="let speaker of speakers; let i = index" class="carousel-item" [class.active]="i === 0">
+			<div class="row">
+			  <div class="col-lg-6 col-md-12 col-sm-12">
+			<div class="speaker-image image-wrapper text-center">
+			  <img [src]="speaker.image" class="d-block w-100" alt="Image_not_found">
+			</div>
+			  </div>
+			  <div class="col-lg-6 col-md-12 col-sm-12">
+			<div class="speaker-content">
+			  <div class="section-title text-left mb-50">
+			<span class="line-style"></span>
+			<small class="sub-title">{{ speaker.subtitle }}</small>
+			<h2 class="big-title">Professional <strong>Speakers</strong></h2>
+			  </div>
+			  <div class="speaker-info">
+			<div class="speaker-title mb-30">
+			  <span class="speaker-name"><strong>{{ speaker.name }}</strong> {{ speaker.lastName }}</span><br>
+			  <span class="work-experience yellow-color"><strong>{{ speaker.experience }} Years</strong> experienced</span>
+			</div>
+			<p class="black-color mb-30">{{ speaker.description }}</p>
 			  </div>
 			</div>
-		  </section>
-		  
+			  </div>
+			</div>
+			  </div>
+			</div>
+			  
+			<!-- Carousel controls -->
+			<button class="carousel-control-prev" type="button" data-bs-target="#speakerCarousel" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#speakerCarousel" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button>
+			  
+			<!-- Custom Radio-like Indicators -->
+			<div class="carousel-indicators custom-indicators">
+			  <button *ngFor="let speaker of speakers; let i = index" type="button" data-bs-target="#speakerCarousel"
+			[attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-label]="'Slide ' + (i + 1)">
+			  </button>
+			</div>
+			  </div>
+			</div>
+			  </div>
+			</div>
+			  </section>
 		<!-- speaker-section - end
 		================================================== -->
 
