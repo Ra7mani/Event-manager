@@ -48,6 +48,15 @@
                       <li [ngClass]="{'active': activeMenu === 'contact'}" (click)="setActive('contact')" class="menu-item-has-children">
                         <a [routerLink]="['/home/contact']">contact</a>
                       </li>
+                      <a href="#request-modal" class="login-modal-btn">
+                        <i class="fas fa-plus"></i>
+
+                      </a>
+
+                     
+
+                     
+                      
                     </ul>
                   </div>
                 </div>
@@ -62,6 +71,7 @@
                         <a href="#login-modal" class="login-modal-btn">
                           <i class="fas fa-user"></i>
                         </a>
+                        
                         <div id="login-modal" class="reglog-modal-wrapper mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
                           <div class="overlay-black clearfix">
 
@@ -129,25 +139,31 @@
 
                           </div>
                         </div>
+                       <!-- booking request - start -->
+                        
+                        <app-request></app-request>
+                          
+                        <!-- booking request - end -->
                       </li>
                       <li>
                         <button type="button" class="toggle-overlay search-btn" id="searchButton">
                           <i class="fas fa-search"></i>
                         </button>
+                        
                         <!-- search-body - start -->
                         <div class="search-body hidden" id="searchBody">
-                          <div class="search-form">
-                            <form action="#">
-                              <input class="search-input" type="search" placeholder="Search Here">
-                              <div class="outer-close toggle-overlay">
-                                <!-- Close button to hide the search form -->
-                                <button type="button" class="search-close" id="closeButton">
-                                  <i class="fas fa-times"></i>
-                                </button>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
+  <div class="search-form">
+    <form action="#">
+      <input class="search-input" type="search" placeholder="Search Here">
+      <div class="outer-close toggle-overlay">
+        <!-- Close button to hide the search form -->
+        <button type="button" class="search-close" id="closeButton">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
                         <!-- search-body - end -->
                       </li>
                     </ul>
@@ -164,20 +180,27 @@
       </div>
     </div>
 
+
+
+  
+    
+
+
+
     <script>
-      // Récupération des éléments du DOM
+    
 const searchButton = document.getElementById('searchButton');
 const searchBody = document.getElementById('searchBody');
 const closeButton = document.getElementById('closeButton');
 
-// Fonction pour afficher le formulaire de recherche
+
 searchButton.addEventListener('click', function() {
-  searchBody.classList.remove('hidden'); // Supprime la classe cachée
+  searchBody.style.display = 'block'; 
 });
 
-// Fonction pour fermer le formulaire de recherche
+
 closeButton.addEventListener('click', function() {
-  searchBody.classList.add('hidden'); // Ajoute la classe cachée
+  searchBody.style.display = 'none'; 
 });
 
     </script>

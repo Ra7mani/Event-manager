@@ -18,6 +18,10 @@ import { GalleryComponent } from './component/gallery/gallery.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ServiceComponent } from './component/service/service.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AnnonceurListEventsComponent } from './component/annonceur-list-events/annonceur-list-events.component';
+import { EventAnnonceurDetailsComponent } from './component/event-annonceur-details/event-annonceur-details.component';
+import { RequestComponent } from './component/request/request.component';
+import { AnnonceurListRequestComponent } from './component/annonceur-list-request/annonceur-list-request.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { HttpClientModule } from '@angular/common/http';
     BlogComponent,
     GalleryComponent,
     ContactComponent,
-    ServiceComponent
+    ServiceComponent,
+    AnnonceurListEventsComponent,
+    EventAnnonceurDetailsComponent,
+    RequestComponent,
+    AnnonceurListRequestComponent
   ],
   imports: [
     BrowserModule,

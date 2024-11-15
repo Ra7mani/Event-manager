@@ -11,6 +11,10 @@ import { GalleryComponent } from './component/gallery/gallery.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ServiceComponent } from './component/service/service.component';
 import { AboutComponent } from './component/about/about.component';
+import { AnnonceurListEventsComponent } from './component/annonceur-list-events/annonceur-list-events.component';
+import { EventAnnonceurDetailsComponent } from './component/event-annonceur-details/event-annonceur-details.component';
+import { RequestComponent } from './component/request/request.component';
+import { AnnonceurListRequestComponent } from './component/annonceur-list-request/annonceur-list-request.component';
 
 const routes: Routes = [
   {
@@ -32,7 +36,11 @@ const routes: Routes = [
 
       { path: 'event-booking', component: BookingComponent },
       { path: 'event-details', component: EventDetailsComponent },
+      {path: 'annonceur-list-event', component:AnnonceurListEventsComponent},
+      {path: 'event-annonceur-details' , component:EventAnnonceurDetailsComponent},
+      {path: 'request' , component:RequestComponent },
 
+      {path: 'annonceur-list-request', component:AnnonceurListRequestComponent}
 
 
 

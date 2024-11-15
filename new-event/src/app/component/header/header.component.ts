@@ -58,6 +58,16 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  
+  isPopupVisible = false;  // Variable pour contrôler la visibilité de la popup
+
+  // Méthode pour ouvrir la popup
+  openPopup() {
+    this.isPopupVisible = true;
+  }
+
+  // Méthode pour fermer la popup
+  closePopup() {
+    this.isPopupVisible = false;
+  }
   
 }
