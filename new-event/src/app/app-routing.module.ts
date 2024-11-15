@@ -11,6 +11,7 @@ import { GalleryComponent } from './component/gallery/gallery.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ServiceComponent } from './component/service/service.component';
 import { AboutComponent } from './component/about/about.component';
+import { LoginComponent } from './component/login/login.component';
 
 const routes: Routes = [
   {

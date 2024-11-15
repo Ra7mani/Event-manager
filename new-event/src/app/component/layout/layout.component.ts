@@ -72,7 +72,9 @@ export class LayoutComponent {
   // end testimonials list 
 
 
-  
+  verif() {
+    return localStorage.getItem('state') === '0';
+  }
 
 
 }
