@@ -10,7 +10,6 @@ import { LayoutComponent } from './component/layout/layout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './component/about/about.component';
 import { DetailsComponent } from './component/details/details.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SlickCarouselModule,
     
     
   ],

@@ -12,102 +12,17 @@
 
             <!-- reg-form - start -->
 			<div class="col-lg-4 col-md-12 col-sm-12">
-				<div class="reg-form">
-				  <div class="from-title">
-					<h2 class="title-text"><strong>register</strong> now</h2>
-					<div class="sub-title">make a booking now</div>
-				  </div>
-			  
-				  <div class="form-wrapper mb-30" style="max-height: 300px; overflow-y: auto;">
-					<form action="#">
-					  <div class="form-item">
-						<input type="text" placeholder="User Name">
-					  </div>
-					  <div class="form-item">
-						<input type="text" placeholder="First Name">
-					  </div>
 
-					  <div class="form-item">
-						<input type="text" placeholder="Last Name">
-					  </div>
+				<div *ngIf="verif(); else notloggedIn">
 
-					  <div class="form-item">
-						<input type="email" placeholder="Email Address">
-					  </div>
-					  <div class="form-item">
-						<input type="tel" placeholder="Phone Number">
-					  </div>
-					  <div class="form-item" >
-						<select class="package-select" style="max-height: 50px; overflow-y: auto;">
-						  <option selected="">City</option>
-						  <option value="1">Ariana</option>
-						  <option value="2">Beja</option>
-						  <option value="3">Ben Arous</option>
-						  <option value="4">Bizerte</option>
-						  <option value="5">Gabès</option>
-						  <option value="6">Gafsa</option>
-						  <option value="7">Jendouba</option>
-						  <option value="8">Kairouan</option>
-						  <option value="9">Kasserine</option>
-						  <option value="10">Kebili</option>
-						  <option value="11">Kébili</option>
-						  <option value="12">La Manouba</option>
-						  <option value="13">Le Kef</option>
-						  <option value="14">Mahdia</option>
-						  <option value="15">Manouba</option>
-						  <option value="16">Médenine</option>
-						  <option value="17">Monastir</option>
-						  <option value="18">Nabeul</option>
-						  <option value="19">Sfax</option>
-						  <option value="20">Sidi Bouzid</option>
-						  <option value="21">Siliana</option>
-						  <option value="22">Souk Ahras</option>
-						  <option value="23">Tataouine</option>
-						  <option value="24">Tozeur</option>
-						</select>
-					  </div>
-					   
-					 
-					  
-
-					  <div class="form-item">
-						<input type="password" placeholder="password">
-					  </div>
-					  <div class="form-item">
-						<input type="password" placeholder=" Confirm password">
-					  </div>
-					  
-					  <div class="form-item">
-						<label><strong>Choose your account type:</strong></label>
-						<div class="radio-group">
-						  <div class="radio-item">
-							<input type="radio"  name="accountType" value="personal" />
-							<label  >Personal   </label>
-						  </div> 
-						  
-						  
-						</div>
-					  </div>
-					  <div class="form-item">
-						
-						<div class="radio-group">
-						  <div class="radio-item">
-							<input type="radio" name="accountType" value="professional" />
-							<label >Professional </label>
-						  </div> 
-						  
-						  
-						</div>
-					  </div>
-
-					  
-					</form>
-				  </div>
-			  
-				  <button type="submit" class="submit-btn">register now</button>
 				</div>
-			  </div>
-			  
+				  
+				  <ng-template #notloggedIn>
+					<app-signup></app-signup>
+
+				  </ng-template>
+				  
+			</div>
             <!-- reg-form - end -->
 
             <!-- slider-content - start -->
@@ -120,7 +35,7 @@
 				  <span class="date" id="current-date">Loading date...</span>
 				  <h1 class="title-text">MAHDIA</h1>
 				  <strong class="bold-text">KRM For Events</strong>
-				  <a  [routerLink]="['/home/events']" class="details-btn"> Event details</a>
+				  <a  [routerLink]="['/home/events']" class="details-btn"> Join Event Now</a>
 				</div>
 			  </div>
 			  

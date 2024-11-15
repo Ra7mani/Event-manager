@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { AccountService } from 'src/app/services/account.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,8 @@ export class HeaderComponent implements OnInit {
   activeMenu: string = 'home';
  
 
-  constructor(private router: Router) {}
+  constructor(private router: Router   ,  private service: AccountService,
+  ) {}
 
   ngOnInit() {
     this.onScroll();
@@ -58,6 +60,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+<<<<<<< HEAD
   isPopupVisible = false;  // Variable pour contrôler la visibilité de la popup
 
   // Méthode pour ouvrir la popup
@@ -69,5 +72,24 @@ export class HeaderComponent implements OnInit {
   closePopup() {
     this.isPopupVisible = false;
   }
+=======
+  verif() {
+    return localStorage.getItem('state') === '0';
+  }
+  logOut() {
+    // Retrieve user details from localStorage
+    const userString = localStorage.getItem('userconnect');
+
+    if (userString) {
+      //this.user = JSON.parse(userString);
+      //this.service.logout(this.user.refreshToken);
+      console.log('Log out successful');
+      localStorage.clear();
+      this.router.navigateByUrl('/home');
+    }
+  }
+
+  
+>>>>>>> 1dadee00f130b7d2f555d954362f23583b07f448
   
 }

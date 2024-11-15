@@ -1,0 +1,99 @@
+ <!-- reg-form - start -->
+    <div class="reg-form">
+      <div class="from-title">
+        <h2 class="title-text"><strong>register</strong> now</h2>
+        <div class="sub-title">make a booking now</div>
+      </div>
+  
+      <div class="form-wrapper mb-30" style="max-height: 300px; overflow-y: auto;">
+        <form action="#" [formGroup]="registrationForm">
+          <div class="form-item">
+            <input type="text" placeholder="User Name" formControlName="UserName">
+          </div>
+          <div class="form-item">
+            <input type="text" placeholder="First Name" formControlName="FirstName">
+          </div>
+
+          <div class="form-item">
+            <input type="text" placeholder="Last Name" formControlName="LastName">
+          </div>
+
+          <div class="form-item">
+            <input type="email" placeholder="Email Address" formControlName="EmailAddress">
+          </div>
+          <div class="form-item">
+            <input type="tel" placeholder="Phone Number" formControlName="PhoneNumber">
+          </div>
+          <div class="form-item" >
+            <select class="package-select" style="max-height: 50px; overflow-y: auto;" formControlName="City">
+                <option selected="">City</option>
+                <option value="Ariana">Ariana</option>
+                <option value="Beja">Beja</option>
+                <option value="Ben Arous">Ben Arous</option>
+                <option value="Bizerte">Bizerte</option>
+                <option value="Gabès">Gabès</option>
+                <option value="Gafsa">Gafsa</option>
+                <option value="Jendouba">Jendouba</option>
+                <option value="Kairouan">Kairouan</option>
+                <option value="Kasserine">Kasserine</option>
+                <option value="Kebili">Kebili</option>
+                <option value="Manouba">Manouba</option>
+                <option value="Kef">Kef</option>
+                <option value="Mahdia">Mahdia</option>
+                <option value="Médenine">Médenine</option>
+                <option value="Monastir">Monastir</option>
+                <option value="Nabeul">Nabeul</option>
+                <option value="Sfax">Sfax</option>
+                <option value="Sidi Bouzid">Sidi Bouzid</option>
+                <option value="Siliana">Siliana</option>
+                <option value="Sousse">Sousse</option>
+                <option value="Tataouine">Tataouine</option>
+                <option value="Tozeur">Tozeur</option>
+                <option value="Tunis">Tunis</option>
+                <option value="Zaghouan">Zaghouan</option>
+                
+            </select>
+          </div>
+           
+         
+          
+
+          <div class="form-item">
+            <input type="password" placeholder="password" formControlName="Password">
+          </div>
+          <!--
+          <div class="form-item">
+            <input type="password" placeholder=" Confirm password" formControlName="confirmpassword">
+          </div>-->
+          
+          <div class="form-item">
+            <label><strong>Choose your account type:</strong></label>
+            <div class="radio-group">
+              <div class="radio-item">
+                <input type="radio"  name="Role" value="personal" formControlName="Role" />
+                <label  >Personal   </label>
+              </div> 
+              
+              
+            </div>
+          </div>
+          <div class="form-item">
+            
+            <div class="radio-group">
+              <div class="radio-item">
+                <input type="radio" name="Role" value="professional" formControlName="Role" />
+                <label >Professional </label>
+              </div> 
+              
+              
+            </div>
+          </div>
+
+          
+        </form>
+      </div>
+  
+      <button type="submit" class="submit-btn" (click)="signup()">register now</button>
+    </div>
+  
+<!-- reg-form - end -->
