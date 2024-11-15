@@ -18,16 +18,12 @@ import { GalleryComponent } from './component/gallery/gallery.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { ServiceComponent } from './component/service/service.component';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
-import { AnnonceurListEventsComponent } from './component/annonceur-list-events/annonceur-list-events.component';
-import { EventAnnonceurDetailsComponent } from './component/event-annonceur-details/event-annonceur-details.component';
-import { RequestComponent } from './component/request/request.component';
-import { AnnonceurListRequestComponent } from './component/annonceur-list-request/annonceur-list-request.component';
-=======
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
->>>>>>> 1dadee00f130b7d2f555d954362f23583b07f448
+import { RequestComponent } from './component/request/request.component';
+import { AnnonceurListEventsComponent } from './component/annonceur-list-events/annonceur-list-events.component';
 
+import { AnnonceurListRequestComponent } from './component/annonceur-list-request/annonceur-list-request.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,15 +40,11 @@ import { SignupComponent } from './component/signup/signup.component';
     GalleryComponent,
     ContactComponent,
     ServiceComponent,
-<<<<<<< HEAD
-    AnnonceurListEventsComponent,
-    EventAnnonceurDetailsComponent,
-    RequestComponent,
-    AnnonceurListRequestComponent
-=======
     LoginComponent,
-    SignupComponent
->>>>>>> 1dadee00f130b7d2f555d954362f23583b07f448
+    SignupComponent,
+    RequestComponent,
+    AnnonceurListEventsComponent,
+    AnnonceurListRequestComponent
   ],
   imports: [
     BrowserModule,

@@ -48,26 +48,27 @@
                       <li [ngClass]="{'active': activeMenu === 'contact'}" (click)="setActive('contact')" class="menu-item-has-children">
                         <a [routerLink]="['/home/contact']">contact</a>
                       </li>
-<<<<<<< HEAD
                       <a href="#request-modal" class="login-modal-btn">
                         <i class="fas fa-plus"></i>
 
                       </a>
 
                      
-
-                     
-                      
-=======
-
                       <li class="nav-item" *ngIf="verif(); else notloggedIn">
                         <a class="nav-link"  (click)="logOut()" type="submit">Logout </a>
     
-                     </li>
+                       </li>
                     <ng-template #notloggedIn>
                         
                     </ng-template>
->>>>>>> 1dadee00f130b7d2f555d954362f23583b07f448
+                    <li>
+                        
+                      <!-- booking request - start -->
+                       
+                       <app-request></app-request>
+                         
+                       <!-- booking request - end -->
+                     </li>
                     </ul>
                   </div>
                 </div>
@@ -78,117 +79,36 @@
                 <div class="col-lg-2">
                   <div class="user-search-btn-group ul-li clearfix">
                     <ul>
-<<<<<<< HEAD
-                      <li>
-                        <a href="#login-modal" class="login-modal-btn">
-                          <i class="fas fa-user"></i>
-                        </a>
-                        
-                        <div id="login-modal" class="reglog-modal-wrapper mfp-hide clearfix" style="background-image: url(assets/images/login-modal-bg.jpg);">
-                          <div class="overlay-black clearfix">
-
-                            <!-- leftside-content - start -->
-                            <div class="leftside-content">
-                              <div class="site-logo-wrapper mb-80">
+                     
+                            <li class="nav-item" *ngIf="!verif(); else notloggedIn">
+                              
+                              <app-login></app-login>
+                            </li>
+                                <ng-template #notloggedIn>
                             
-                              </div>
-                              <div class="register-login-link mb-80">
-                                <ul>
-                                  <li class="active"><a href="#!">Login</a></li>
-                                  <li><a href="#!">Register</a></li>
-                                </ul>
-                              </div>
-                              <div class="copyright-text" >
-                                <p  style="color: antiquewhite;">©2024 <a href="#!"  ></a> all right reserved, made with <i class="fas fa-heart"></i> by KRM Team </p>
-                              </div>
-                            </div>
-                            <!-- leftside-content - end -->
-
-                            <!-- rightside-content - start -->
-                            <div class="rightside-content text-center">
-
-                              <div class="mb-30">
-                                <h2 class="form-title title-large white-color">Account <strong>Login</strong></h2>
-                                <span class="form-subtitle white-color">Login to our website, or <strong>REGISTER</strong></span>
-                              </div>
-
-                              <div class="fb-login-btn mb-30">
-                                <a href="#!">
-                                  <span class="icon">
-                                    <i class="fab fa-facebook-f"></i>
-                                  </span>
-                                  login with facebook
-                                </a>
-                              </div>
-
-                              <div class="or-text mb-30">
-                                <span>or sign in</span>
-                              </div>
-
-                              <div class="login-form text-center mb-50">
-                                <form action="#!">
-                                  <div class="form-item">
-                                    <input type="email" placeholder="example@gmail.com">
-                                  </div>
-                                  <div class="form-item">
-                                    <input type="password" placeholder="Password">
-                                  </div>
-                                  <button type="submit" class="login-btn">login now</button>
-                                </form>
-                              </div>
-
-                              <div class="bottom-text white-color">
-                                
-                                <p class="m-0">** At least one telephone number is required.</p>
-                              </div>
-
-                            </div>
-                            <!-- rightside-content - end -->
-
-                            <a class="popup-modal-dismiss" href="#!">
-                              <i class="fas fa-times"></i>
-                            </a>
-
-                          </div>
-                        </div>
-                       <!-- booking request - start -->
-                        
-                        <app-request></app-request>
-                          
-                        <!-- booking request - end -->
-                      </li>
-=======
-                      <li class="nav-item" *ngIf="!verif(); else notloggedIn">
-                        
-                        <app-login></app-login>
-                     </li>
-                    <ng-template #notloggedIn>
-                      
-                    </ng-template>
+                                </ng-template>
                    
-
->>>>>>> 1dadee00f130b7d2f555d954362f23583b07f448
-                      <li>
-                        <button type="button" class="toggle-overlay search-btn" id="searchButton">
-                          <i class="fas fa-search"></i>
-                        </button>
-                        
-                        <!-- search-body - start -->
-                        <div class="search-body hidden" id="searchBody">
-  <div class="search-form">
-    <form action="#">
-      <input class="search-input" type="search" placeholder="Search Here">
-      <div class="outer-close toggle-overlay">
-        <!-- Close button to hide the search form -->
-        <button type="button" class="search-close" id="closeButton">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-                        <!-- search-body - end -->
-                      </li>
+                            <li>
+                              <button type="button" class="toggle-overlay search-btn" id="searchButton">
+                                <i class="fas fa-search"></i>
+                              </button>
+                              
+                              <!-- search-body - start -->
+                                                        <div class="search-body hidden" id="searchBody">
+                                  <div class="search-form">
+                                    <form action="#">
+                                      <input class="search-input" type="search" placeholder="Search Here">
+                                      <div class="outer-close toggle-overlay">
+                                        <!-- Close button to hide the search form -->
+                                        <button type="button" class="search-close" id="closeButton">
+                                          <i class="fas fa-times"></i>
+                                        </button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              <!-- search-body - end -->
+                            </li>
                     </ul>
                   </div>
                 </div>

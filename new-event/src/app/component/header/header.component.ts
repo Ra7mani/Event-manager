@@ -60,7 +60,6 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-<<<<<<< HEAD
   isPopupVisible = false;  // Variable pour contrôler la visibilité de la popup
 
   // Méthode pour ouvrir la popup
@@ -72,7 +71,6 @@ export class HeaderComponent implements OnInit {
   closePopup() {
     this.isPopupVisible = false;
   }
-=======
   verif() {
     return localStorage.getItem('state') === '0';
   }
@@ -90,6 +88,5 @@ export class HeaderComponent implements OnInit {
   }
 
   
->>>>>>> 1dadee00f130b7d2f555d954362f23583b07f448
   
 }
