@@ -41,7 +41,9 @@ export class LoginComponent implements OnInit {
         console.log('token decoded :', decodedToken);
         localStorage.setItem('decodedToken',JSON.stringify(decodedToken))
         const role =decodedToken.role;
-        console.log('User role:', decodedToken.role);
+        console.log('User role:', role);
+        localStorage.setItem('role',role)
+
         this.form.reset();
       },
       error => {

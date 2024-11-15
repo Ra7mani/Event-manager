@@ -35,7 +35,31 @@
 				  <span class="date" id="current-date">Loading date...</span>
 				  <h1 class="title-text">MAHDIA</h1>
 				  <strong class="bold-text">KRM For Events</strong>
-				  <a  [routerLink]="['/home/events']" class="details-btn"> Join Event Now</a>
+				  
+				  
+				  <div *ngIf="verifrole(); else joinEvent">
+					<a href="#request-modal" class="login-modal-btn" id="request">
+						Make your Request Event Now
+					</a>
+
+                       
+
+                      
+							
+				  </div>
+				  
+
+				  
+				  <ng-template #joinEvent>
+					<a [routerLink]="['/home/events']" class="details-btn">Join Event Now</a>
+				  </ng-template>
+				  
+				  <!-- booking request - start -->
+                       
+				  <app-request></app-request>
+                         
+				  <!-- booking request - end -->
+
 				</div>
 			  </div>
 			  

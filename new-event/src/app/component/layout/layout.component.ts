@@ -75,6 +75,15 @@ export class LayoutComponent {
   verif() {
     return localStorage.getItem('state') === '0';
   }
+  verifrole()
+  {
+    return localStorage.getItem('role') === 'Announcer';
 
+  }
+  showRequestComponent: boolean = false;
+
+  onMakeRequest(): void {
+    this.showRequestComponent = true;
+  }
 
 }
